@@ -1,24 +1,29 @@
-$(document).ready(function() {
-  $("form#questions").submit(function(event) {
-   
-    const q1 = $("input#q1").val();
-    const q2 = $("input#q2").val();
-    const q3 = $("input#q3").val();
-    const q4 = $("input#q2").val();
-    const q5 = $("input#q5").val();
-
-    if (q1 === q3 && q1 != q4) {
-      language = "Ruby"
-    } else if (q2 === q5 && q2 != q1) {
-      language = "C#"
-    } else if (q4 === q2 && q5 != q2 && q5 === q3) {
-      language = "JS"
-    } else {
-      language = "not learning code";
+function pigLatin(text) {
+  const wordArray = text.split(" ");
+  let pigArray = [];
+  wordArray.foreach(index){
+    if (index.charAt(0) === "a" || index.charAt(0) === "e" || index.charAt(0) === "i" || index.charAt(0) === "o" || index.charAt(0) === "u") {
+      pigArray[index] = index.concat("way");
     }
-    $("#answer").show();
-    $("#language").text(language);
+    if else (index.charAt(0) === "b" || index.charAt(0) === "c" || index.charAt(0) === "d" || index.charAt(0) === "f" || index.charAt(0) === "g" || index.charAt(0) === "h" || index.charAt(0) === "j" || index.charAt(0) === "k" || index.charAt(0) === "l" || index.charAt(0) === "m" || index.charAt(0) === "n" || index.charAt(0) === "p" || index.charAt(0) === "r" || index.charAt(0) === "s" || index.charAt(0) === "t" || index.charAt(0) === "v" || index.charAt(0) === "w" || index.charAt(0) === "x" || index.charAt(0) === "y" || index.charAt(0) === "z") {
+      pigArray[index] = index.substring(1).concat(index.charAt(0)).concat("ay");
+    }
+    //if else (index.charAt(0) === "q") {
+    //  if (index.charAt(1) === "u") {
 
+    //  }
+    //  else {
+
+    //  }
+    //}
+  }
+} 
+
+
+
+$(document).ready(function() {
+  $("form#userInput").submit(function(event) {
     event.preventDefault();
+    const 
   });
 });
